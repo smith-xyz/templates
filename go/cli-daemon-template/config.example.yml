@@ -1,0 +1,73 @@
+# CLI Service Manager Configuration
+# Copy this file to config.yml and modify as needed
+
+# Service settings
+service:
+  # Name of the service (should match binary name)
+  name: "cli-service-manager"
+  
+  # Description shown in systemd
+  description: "CLI Service Manager - A template service"
+  
+  # How often to run the main service loop (in seconds)
+  interval: 30
+  
+  # User to run the service as (root, or create a dedicated user)
+  user: "root"
+
+# Logging configuration
+logging:
+  # Log level: debug, info, warn, error
+  level: "info"
+  
+  # Whether to log to file in addition to systemd journal
+  file_enabled: false
+  
+  # Log file path (only used if file_enabled is true)
+  file_path: "/var/log/cli-service-manager.log"
+  
+  # Maximum log file size in MB
+  max_size: 10
+  
+  # Number of old log files to retain
+  max_backups: 5
+
+# Application specific settings
+app:
+  # Example: API endpoint if this were a web service
+  # port: 8080
+  # host: "localhost"
+  
+  # Example: Database connection if needed
+  # database:
+  #   host: "localhost"
+  #   port: 5432
+  #   name: "myapp"
+  #   user: "myuser"
+  #   password: "mypassword"
+  
+  # Example: External service URLs
+  # external_services:
+  #   api_url: "https://api.example.com"
+  #   timeout: 30
+  
+  # Example: File paths
+  # paths:
+  #   data_dir: "/var/lib/cli-service-manager"
+  #   tmp_dir: "/tmp/cli-service-manager"
+  
+  # Example: Feature flags
+  # features:
+  #   monitoring_enabled: true
+  #   debug_mode: false
+  
+# System settings
+system:
+  # Maximum number of concurrent operations
+  max_workers: 10
+  
+  # Memory limit in MB (0 = no limit)
+  memory_limit: 0
+  
+  # CPU limit as percentage (0 = no limit)
+  cpu_limit: 0 

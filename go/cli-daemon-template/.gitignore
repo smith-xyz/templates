@@ -1,0 +1,59 @@
+# Build output
+build/
+dist/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+cli-service-manager
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+
+# Dependency directories
+vendor/
+
+# Go workspace file
+go.work
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+*.log
+
+# Configuration files (keep examples)
+config.yml
+config.yaml
+config.json
+
+# Temporary files
+tmp/
+temp/
+
+# Local development files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Service files (these are generated)
+*.service 
